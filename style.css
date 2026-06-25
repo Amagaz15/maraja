@@ -260,7 +260,7 @@
     .lineup-layout { display: grid; grid-template-columns: .72fr 1.28fr; gap: 52px; align-items: center; }
     .lineup-poster { position: relative; max-width: 385px; margin-inline: auto; overflow: hidden; border-radius: 20px; border: 1px solid rgba(255,214,129,.45); box-shadow: var(--shadow); }
     .lineup-poster img { width: 100%; height: auto; }
-    .lineup-poster::after { content: "Edición 2026"; position: absolute; right: 12px; top: 12px; padding: 6px 8px; color: var(--gold-light); background: rgba(5,5,5,.7); border: 1px solid rgba(255,214,129,.28); border-radius: 999px; font-size: .58rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .lineup-poster::after { position: absolute; right: 12px; top: 12px; padding: 6px 8px; color: var(--gold-light); background: rgba(5,5,5,.7); border: 1px solid rgba(255,214,129,.28); border-radius: 999px; font-size: .58rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
     .lineup-info { display: grid; gap: 13px; }
     .lineup-note { padding: 18px; border-left: 2px solid var(--gold); background: rgba(215,154,50,.07); color: #dfd4c1; font-size: .9rem; line-height: 1.67; }
     .artist-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 33px; }

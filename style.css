@@ -331,8 +331,7 @@
       .nav.open .nav-links a { padding: 14px 5px; border-bottom: 1px solid rgba(255,214,129,.12); }
       .nav.open .nav-links a:last-child { border-bottom: none; }
       .nav-book { display: none; }
-      .hero { min-height: 540px;
-              padding: 65px 0 50px; }
+      .hero { min-height: 694px; }
       .hero-art { width: 43vw; height: 600px; opacity: .52; right: -4vw; }
       .experience-grid, .program-layout, .tickets-layout, .lineup-layout, .hotel-grid, .history-layout, .faq-layout { grid-template-columns: 1fr; gap: 36px; }
       .experience-intro { position: static; }
@@ -345,8 +344,8 @@
       .brand { min-width: 0; }
       .brand img { width: 45px; height: 45px; }
       .brand-label strong { font-size: .75rem; }
-      .hero { min-height: auto; padding: 35px 0 32px; }
-      .hero-content { padding: 35px 0 24px; }
+      .hero { min-height: 735px; }
+      .hero-content { padding: 56px 0 48px; }
       .hero-art { display: none; }
       .hero-ring { width: 610px; height: 610px; right: -388px; top: -180px; }
       .hero-logo { margin-top: 0; width: min(290px, 72vw); }

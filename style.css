@@ -17,6 +17,7 @@
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
+      width: 100%;
       overflow-x: hidden;
       background:
         radial-gradient(circle at 17% 8%, rgba(216, 156, 46, .14), transparent 21rem),

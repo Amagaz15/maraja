@@ -380,7 +380,7 @@
       .meta-label { font-size: .53rem; }
       .meta-value { font-size: .68rem; }
       .count-item strong { font-size: 1.35rem; }
-      .artist-grid { grid-template-columns: 1fr; }
-      .reserve-steps { grid-template-columns: repeat(3, 1fr); }
+      .artist-grid { grid-template-columns: repeat(3, 1fr); }
+      .reserve-steps { grid-template-columns: 1fr; }
       .contact-card { align-items: flex-start; flex-direction: column; }
     }

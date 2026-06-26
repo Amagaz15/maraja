@@ -366,7 +366,7 @@
       .reserve-steps { grid-template-columns: repeat(2, 1fr); }
       .contact-grid { grid-template-columns: 1fr; }
       .contact-card .button { width: auto; }
-      .artist-grid { grid-template-columns: repeat(2, 1fr); }
+      .artist-grid { grid-template-columns: repeat(3, 1fr); }
       .hotel-gallery { grid-template-rows: 210px 210px; }
       .hotel-note { font-size: .69rem; }
       .history-video video { aspect-ratio: 16/9; }

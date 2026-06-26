@@ -345,8 +345,7 @@
       .brand { min-width: 0; }
       .brand img { width: 45px; height: 45px; }
       .brand-label strong { font-size: .75rem; }
-      .hero { min-height: auto;
-              padding: 35px 0 32px; }
+      .hero { min-height: auto; padding: 35px 0 32px; }
       .hero-content { padding: 35px 0 24px; }
       .hero-art { display: none; }
       .hero-ring { width: 610px; height: 610px; right: -388px; top: -180px; }

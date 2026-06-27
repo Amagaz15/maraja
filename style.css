@@ -1089,3 +1089,339 @@ footer {
     flex-direction: column;
   }
 }
+
+/* Animaciones y mejoras visuales */
+
+.site-header {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.gold-text {
+  background-size: 220% 100%;
+  animation: goldSweep 8s linear infinite;
+}
+
+/* Hero con fondo animado */
+.hero {
+  isolation: isolate;
+  min-height: clamp(520px, 74vh, 690px);
+  background:
+    radial-gradient(ellipse at 78% 28%, rgba(143, 31, 61, .28), transparent 30rem),
+    radial-gradient(ellipse at 62% 76%, rgba(26, 163, 154, .13), transparent 28rem),
+    linear-gradient(180deg, #050505 0%, #120c08 58%, #050505 100%);
+}
+
+.hero::before {
+  z-index: -3;
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, .98) 0%, rgba(5, 5, 5, .88) 46%, rgba(5, 5, 5, .58) 72%, rgba(5, 5, 5, .92) 100%),
+    linear-gradient(112deg, transparent 0 26%, rgba(255, 214, 129, .14) 30%, transparent 36% 100%),
+    linear-gradient(64deg, transparent 0 56%, rgba(143, 31, 61, .2) 60%, transparent 68% 100%),
+    linear-gradient(132deg, transparent 0 66%, rgba(26, 163, 154, .13) 69%, transparent 77% 100%);
+  background-size: 100% 100%, 180% 100%, 160% 100%, 170% 100%;
+  animation: heroLights 13s ease-in-out infinite alternate;
+  transform: scale(1.03);
+}
+
+.hero::after {
+  z-index: -2;
+  background-image:
+    radial-gradient(circle, rgba(255, 223, 154, .58) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(255, 255, 255, .22) 0 1px, transparent 1.7px),
+    linear-gradient(115deg, transparent 0 44%, rgba(255, 214, 129, .1) 48%, transparent 55% 100%);
+  background-position: 0 0, 42px 38px, center;
+  background-size: 120px 120px, 170px 170px, 100% 100%;
+  opacity: .75;
+  animation: heroDust 26s linear infinite;
+}
+
+.hero-content {
+  z-index: 1;
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  width: min(42vw, 440px);
+  aspect-ratio: 1;
+  right: min(-18vw, -130px);
+  top: 18px;
+  border: 1px solid rgba(255, 214, 129, .18);
+  border-radius: 50%;
+  background:
+    conic-gradient(from 180deg, transparent 0 16%, rgba(255, 214, 129, .26) 22%, transparent 28% 64%, rgba(143, 31, 61, .2) 70%, transparent 78% 100%),
+    radial-gradient(circle, transparent 58%, rgba(255, 214, 129, .12) 59% 60%, transparent 61%);
+  opacity: .48;
+  animation: haloTurn 18s linear infinite;
+  pointer-events: none;
+}
+
+.hero-content > * {
+  animation: heroRise .85s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+.hero-copy {
+  animation-delay: .12s;
+}
+
+.hero-badges {
+  animation-delay: .2s;
+}
+
+.countdown {
+  animation-delay: .3s;
+}
+
+.hero-badge,
+.count-item {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.count-item {
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s ease, border-color .25s ease;
+}
+
+.count-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent, rgba(255, 214, 129, .16), transparent);
+  transform: translateX(-120%);
+  animation: softShine 6s ease-in-out infinite;
+}
+
+.count-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 214, 129, .52);
+}
+
+/* Fotos y tarjetas */
+.lineup-poster,
+.artist-card,
+.hotel-photo,
+.ticket,
+.contact-card {
+  will-change: transform;
+}
+
+.lineup-poster {
+  transform: rotate(-1.2deg);
+  transition: transform .45s cubic-bezier(.2, .7, .2, 1), box-shadow .45s ease, border-color .45s ease;
+}
+
+.lineup-poster:hover {
+  transform: rotate(0deg) translateY(-7px);
+  border-color: rgba(255, 214, 129, .72);
+  box-shadow: 0 30px 95px rgba(0, 0, 0, .6), 0 0 38px rgba(215, 154, 50, .16);
+}
+
+.lineup-poster img,
+.artist-photo img,
+.hotel-photo img {
+  transition: transform .7s cubic-bezier(.2, .7, .2, 1), filter .7s ease;
+}
+
+.lineup-poster:hover img {
+  transform: scale(1.025);
+  filter: saturate(1.06) contrast(1.04);
+}
+
+.artist-card {
+  position: relative;
+  transition: opacity .65s ease, transform .35s cubic-bezier(.2, .7, .2, 1), border-color .3s ease, background .3s ease, box-shadow .3s ease;
+}
+
+.artist-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 214, 129, .56);
+  background: linear-gradient(180deg, rgba(255, 214, 129, .09), rgba(255, 255, 255, .035));
+  box-shadow: 0 24px 58px rgba(0, 0, 0, .35), 0 0 28px rgba(215, 154, 50, .13);
+}
+
+.artist-photo {
+  background:
+    radial-gradient(ellipse at 50% 7%, rgba(255, 214, 129, .34), transparent 42%),
+    linear-gradient(135deg, rgba(143, 31, 61, .22), transparent 38%),
+    #17130c;
+}
+
+.artist-photo span {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.artist-card:hover .artist-photo img {
+  transform: scale(1.08);
+  filter: saturate(1.12) contrast(1.08);
+}
+
+.hotel-photo {
+  transition: transform .34s cubic-bezier(.2, .7, .2, 1), border-color .3s ease, box-shadow .3s ease;
+}
+
+.hotel-photo:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 214, 129, .58);
+  box-shadow: 0 24px 62px rgba(0, 0, 0, .38), 0 0 28px rgba(215, 154, 50, .11);
+}
+
+.hotel-photo:hover img {
+  transform: scale(1.075);
+  filter: saturate(1.08) contrast(1.08);
+}
+
+.ticket,
+.contact-card,
+.schedule-row,
+details {
+  transition: opacity .65s ease, transform .32s cubic-bezier(.2, .7, .2, 1), border-color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+
+.ticket:hover,
+.contact-card:hover,
+details:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 214, 129, .48);
+  background: rgba(255, 255, 255, .075);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, .24);
+}
+
+.schedule-row:hover {
+  transform: translateX(8px);
+  border-bottom-color: rgba(255, 214, 129, .42);
+}
+
+/* Animación al aparecer */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal.active {
+  animation: modalFade .22s ease both;
+}
+
+.modal.active img {
+  animation: modalZoom .28s cubic-bezier(.2, .7, .2, 1) both;
+}
+
+@keyframes heroRise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroLights {
+  from {
+    background-position: center, 0% 50%, 100% 50%, 20% 50%;
+  }
+
+  to {
+    background-position: center, 100% 50%, 0% 50%, 90% 50%;
+  }
+}
+
+@keyframes heroDust {
+  to {
+    background-position: 120px 120px, -170px 170px, center;
+  }
+}
+
+@keyframes haloTurn {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes goldSweep {
+  to {
+    background-position: 220% center;
+  }
+}
+
+@keyframes softShine {
+  0%,
+  58% {
+    transform: translateX(-125%);
+  }
+
+  78%,
+  100% {
+    transform: translateX(125%);
+  }
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalZoom {
+  from {
+    opacity: 0;
+    transform: scale(.96) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@media (max-width: 650px) {
+  .hero {
+    min-height: 520px;
+    padding: 48px 0 42px;
+  }
+
+  .lineup-poster {
+    transform: none;
+  }
+
+  .schedule-row:hover,
+  .ticket:hover,
+  .contact-card:hover,
+  details:hover,
+  .hotel-photo:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: .001ms !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}

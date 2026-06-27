@@ -76,3 +76,37 @@ if (modal && modalImage && closeModal) {
     if (event.key === "Escape") hideModal();
   });
 }
+
+const animatedElements = document.querySelectorAll(
+  ".lineup-poster, .artist-card, .schedule-row, .hotel-photo, .ticket, .contact-card, .faq-list details"
+);
+
+animatedElements.forEach((element, index) => {
+  element.classList.add("reveal-on-scroll");
+  element.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
+});
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: "0px 0px -70px 0px",
+    }
+  );
+
+  animatedElements.forEach((element) => {
+    revealObserver.observe(element);
+  });
+} else {
+  animatedElements.forEach((element) => {
+    element.classList.add("is-visible");
+  });
+}

@@ -78,7 +78,7 @@ if (modal && modalImage && closeModal) {
 }
 
 const animatedElements = document.querySelectorAll(
-  ".lineup-poster, .artist-card, .schedule-row, .hotel-photo, .ticket, .contact-card, .faq-list details"
+  ".lineup-poster, .artist-card, .schedule-row, .hotel-photo, .ticket, .contact-card, .faq-list details, .sponsor-card"
 );
 
 animatedElements.forEach((element, index) => {
